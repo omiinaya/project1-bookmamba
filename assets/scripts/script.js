@@ -164,9 +164,9 @@ function quotesAjax(){
     method: "GET"
   }).then(function(response) { 
     var data = JSON.parse(response)
-    var random = Math.floor(Math.random() * data.length-1);
+    var random = Math.floor(Math.random() * Math.max(data.length, 1));
     console.log(random)
-    quoteResponse = data[random];
+    quoteResponse = data[random % data.length];
     console.log(quoteResponse);
     shortenQuote(random)
     $("#quote-spinner").hide();

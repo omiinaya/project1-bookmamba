@@ -80,7 +80,7 @@
                 
                 <!--here goes the button to display the next book-->
                 <div class="column is-2">
-                    <div class="has-text-grey-dark is-uppercase" id="nextBtn" onclick=bookData()>
+                    <div class="has-text-grey-dark is-uppercase" id="nextBtn" onclick=bookData() role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')event.preventDefault(),bookData()">
                         <i class="fas fa-angle-right is-size-1"></i>
                         <p>View<br>Next</p>
                     </div>

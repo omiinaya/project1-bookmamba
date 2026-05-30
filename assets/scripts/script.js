@@ -168,7 +168,7 @@ function quotesAjax(){
     console.log(random)
     quoteResponse = data[random % data.length];
     console.log(quoteResponse);
-    shortenQuote(random)
+    shortenQuote()
     $("#quote-spinner").hide();
     $("#quote-author").text("-"+data[random].author);
     $("#nyTimes").show();
